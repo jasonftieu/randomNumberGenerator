@@ -1,0 +1,8 @@
+To run the app in AppEngine, download the app.yaml file and the www directory
+
+make sure that these two items are in the same directory, then use the command:
+  gcloud app deploy
+  
+ From there the command: 
+  gcloud app browse
+ will allow you to view the web app. 
