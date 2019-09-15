@@ -23,7 +23,7 @@ then deployed it locally using
 ```
 mvn appengine:run
 ```
-then deployd the application using
+then deployed the application using
 ```
 mvn appengine:deploy
 ```
