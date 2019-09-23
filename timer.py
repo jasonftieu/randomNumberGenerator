@@ -1,8 +1,8 @@
 import requests
 import re
 import time
-
-addr_list = ['http://34.67.239.124:8080/rng/', 'https://project-251314.appspot.com/']
+                # Java VM                           Java App Engine                     Python VM                       Python App Engine
+addr_list = ['http://34.67.239.124:8080/rng/', 'https://project-251314.appspot.com/', 'http://35.192.66.247:8000/', 'https://software-engineering-251917.appspot.com/']
 
 for addr in addr_list:
     start_time = time.time()                    # start timer
