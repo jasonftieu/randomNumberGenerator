@@ -25,9 +25,11 @@ public class RNG extends HttpServlet {
 		
 		int num = (int)(Math.random() * 1000000);
 		
-		response.setContentType("application/json");
+//		response.setContentType("application/json");
+//		
+//		response.setCharacterEncoding("utf-8");
 		
-		response.setCharacterEncoding("utf-8");
+		response.setContentType("application/json; charset=utf-8");
 		
 		
 		String randomNumJson = "{\n    \"number\": " + "\"" + num + "\"\n}";
