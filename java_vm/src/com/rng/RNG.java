@@ -29,15 +29,15 @@ public class RNG extends HttpServlet {
 //		
 //		response.setCharacterEncoding("utf-8");
 		
-		response.setContentType("application/json; charset=utf-8");
+		response.setContentType("text/plain; charset=utf-8");
 		
 		
-		String randomNumJson = "{\n    \"number\": " + "\"" + num + "\"\n}";
+//		String randomNumJson = "{\n    \"number\": " + "\"" + num + "\"\n}";
 		
 //		out.print(randomNumJson);
 //		out.flush();
 		
-		response.getWriter().write(randomNumJson);
+		response.getWriter().write(num);
 		response.getWriter().flush();
 	}
 
