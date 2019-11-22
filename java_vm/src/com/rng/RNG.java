@@ -20,7 +20,7 @@ public class RNG extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html");
+//		response.setContentType("text/html");
 //		PrintWriter out = response.getWriter();
 		
 		int num = (int)(Math.random() * 1000000);
@@ -29,15 +29,16 @@ public class RNG extends HttpServlet {
 //		
 //		response.setCharacterEncoding("utf-8");
 		
-		response.setContentType("text/plain; charset=utf-8");
+//		response.setContentType("text/plain; charset=utf-8");
+		response.setContentType("application/json; charset=utf-8");
 		
 		
-//		String randomNumJson = "{\n    \"number\": " + "\"" + num + "\"\n}";
+		String randomNumJson = "{\n    \"number\": " + "\"" + Integer.toString(num) + "\"\n}";
 		
 //		out.print(randomNumJson);
 //		out.flush();
 	
-		response.getWriter().write(Integer.toString(num));
+		response.getWriter().write(randomNumJson);
 		response.getWriter().flush();
 	}
 
