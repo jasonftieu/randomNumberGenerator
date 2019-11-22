@@ -36,8 +36,8 @@ public class RNG extends HttpServlet {
 		
 //		out.print(randomNumJson);
 //		out.flush();
-		
-		response.getWriter().write(num);
+	
+		response.getWriter().write(Integer.toString(num));
 		response.getWriter().flush();
 	}
 
