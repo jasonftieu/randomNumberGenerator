@@ -23,23 +23,34 @@ public class RNG extends HttpServlet {
 //		response.setContentType("text/html");
 //		PrintWriter out = response.getWriter();
 		
-		int num = (int)(Math.random() * 1000000);
-		
-//		response.setContentType("application/json");
+//		int num = (int)(Math.random() * 1000000);
 //		
-//		response.setCharacterEncoding("utf-8");
+////		response.setContentType("application/json");
+////		
+////		response.setCharacterEncoding("utf-8");
+//		
+////		response.setContentType("text/plain; charset=utf-8");
+//		response.setContentType("application/json; charset=utf-8");
+//		
+//		
+//		String randomNumJson = "{\n    \"number\": " + "\"" + Integer.toString(num) + "\"\n}";
+//		
+////		out.print(randomNumJson);
+////		out.flush();
+//	
+//		response.getWriter().write(randomNumJson);
+//		response.getWriter().flush();
 		
-//		response.setContentType("text/plain; charset=utf-8");
 		response.setContentType("application/json; charset=utf-8");
 		
+		String testJson = "{\r\n" + 
+				"  \"userId\": 1,\r\n" + 
+				"  \"id\": 1,\r\n" + 
+				"  \"title\": \"delectus aut autem\",\r\n" + 
+				"  \"completed\": false\r\n" + 
+				"}";
 		
-		String randomNumJson = "{\n    \"number\": " + "\"" + Integer.toString(num) + "\"\n}";
-		
-//		out.print(randomNumJson);
-//		out.flush();
-	
-		response.getWriter().write(randomNumJson);
-		response.getWriter().flush();
+		response.getWriter().write(testJson);
 	}
 
 }
