@@ -25,11 +25,11 @@ public class RNG extends HttpServlet {
 		
 		int num = (int)(Math.random() * 1000000);
 		
-		response.setContentType("application/json");
+		response.setContentType("text/plain");
 		
-		String randomNumJson = "{ number: '" + num + "'}";
+//		String randomNumJson = "{ \"number\": \"" + num + "\"}";
 		
-		out.print(randomNumJson);
+		out.print(num);
 		out.flush();
 	}
 
